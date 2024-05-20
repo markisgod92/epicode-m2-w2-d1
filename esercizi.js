@@ -4,7 +4,14 @@
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let x = 10;
+let y = 20;
+
+if (x > y) {
+    console.log(`${x} è maggiore di ${y}`);
+} else {
+    console.log(`${y} è maggiore di ${x}`)
+}
 
 /*
 ESERCIZIO 2
@@ -17,7 +24,19 @@ ESERCIZIO 2
   num >= 20 - mostra in console "Huge"
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let number = 18;
+
+if (number < 5) {
+    console.log("Tiny");
+} else if (number >= 5 && number < 10) {
+    console.log("Small")
+} else if (number >= 10 && number < 15) {
+    console.log("Medium")
+} else if (number >= 15 && number < 20) {
+    console.log("Large")
+} else {
+    console.log("Huge")
+}
 
 //ESERCIZI SUI CICLI: 
 
@@ -25,13 +44,26 @@ ESERCIZIO 2
   Mostra i numeri da 0 a 10 (incluso) in ordine ascendente, ma evitando di mostrare i numeri 3 e 8 (suggerimento: ripassa l'uso di "continue").
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for ( let i = 0; i < numbers.length; i++) {
+    if (numbers[i] === 3 || numbers[i] === 8) {
+        continue;
+    }
+    console.log(numbers[i]);
+}
 
 /* ESERCIZIO 11
   Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare the il valore corrente sia pari o dispari, e mostrare il risultato in console.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+for (let i = 0; i <= 15; i++) {
+    if (i % 2 === 0) {
+        console.log(`${i}: even`);
+    } else {
+        console.log(`${i}: odd`);
+    }
+}
 
 //ESERCIZI EXTRA NON OBBLIGATORI
 
