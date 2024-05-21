@@ -71,7 +71,14 @@ for (let i = 0; i <= 15; i++) {
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let a = 5;
+let b = 3;
+
+if ((a === 8) || (b === 8)) {
+  console.log("Uno dei numeri è uguale a 8");
+} else if ((a + b === 8) || (a - b === 8)) {
+  console.log("La somma/differenza dei numeri è uguale a 8");
+}
 
 /* ESERCIZIO EXTRA 2
 Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
@@ -79,14 +86,28 @@ C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha d
 Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let totalShoppingCart = 23;
+const shippingFee = 10.00;
+const discount = 20;
+let subTotal = 0;
+let checkout = 0;
+
+subTotal = parseFloat((totalShoppingCart - (totalShoppingCart * (discount/100))).toFixed(2));
+
+if (subTotal < 50) {
+  checkout = (subTotal + shippingFee);
+} else {
+  checkout = subTotal;
+};
+
+console.log(`Totale: ${checkout.toFixed(2)}€`)
 
 /* ESERCIZIO EXTRA 3
   Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando, usando l'algoritmo del codice precedente, se le spedizioni siano gratuite oppure no e e calcolando il totale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* ^^^ */
 
 /*  ESERCIZIO EXTRA 4
   Usa un operatore ternaio per assegnare ad una variabile chiamata "gender" i valori "male" o "female".
